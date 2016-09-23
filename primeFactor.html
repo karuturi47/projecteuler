@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+    <body>
+    <input type='text' id='primeFactoryName'/>
+    <button title="find" onclick="findPrimeFactor()">find</button>
+    </body>
+        <script>
+        function findPrimeFactor(){
+            var enteredNumber=document.getElementById("primeFactoryName").value;
+            var divider=0;
+            var qutiant=enteredNumber;
+            var product=1;
+            for(var i=2; i<10000; i++){
+                if(qutiant!=1){
+                if(qutiant%i==0){
+                  divider=i;
+                  qutiant=enteredNumber/i;
+                    product=product*divider;
+                }
+                }else{
+                    break;
+                } 
+            }
+            alert(divider);
+        }     
+        </script>   
+</html>
